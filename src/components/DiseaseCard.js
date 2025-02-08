@@ -11,13 +11,14 @@ const DiseaseCard = ({ title, description, link }) => {
       transition={{ duration: 0.5 }}
     >
       <Card className="mb-4">
-        <Card.Body>
+        <Card.Img src="holder.js/100px270" alt="Card image" />
+        <Card.ImgOverlay>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{description}</Card.Text>
-          <Button as={Link} to={link} variant="primary">
+          <Button as={Link} to={link} variant="primary" className='mt-3'>
             Learn More
           </Button>
-        </Card.Body>
+        </Card.ImgOverlay>
       </Card>
     </motion.div>
   );

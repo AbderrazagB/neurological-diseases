@@ -6,11 +6,11 @@ const CustomNavbar = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
-        <Navbar.Brand href="#home">Neuro Diseases</Navbar.Brand>
+        <Navbar.Brand href="/">Neuro Diseases</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="multiple-sclerosis" smooth={true} duration={500}>
+            <Nav.Link as={Link}  to="multiple-sclerosis" smooth={true} duration={500}>
               Multiple Sclerosis
             </Nav.Link>
             <Nav.Link as={Link} to="stroke" smooth={true} duration={500}>
