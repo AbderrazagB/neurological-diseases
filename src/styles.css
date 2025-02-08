@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background: linear-gradient(135deg, #e0f7fa, #ffffff);
   color: #333;
   margin: 0;
@@ -8,7 +8,7 @@ body {
 
 .disease-section {
   padding: 100px 0;
-  background: rgba(255, 255, 255, 0.884);
+  background: rgba(255, 255, 255, 0.253);
   backdrop-filter: blur(10px);
   margin: 20px;
   border-radius: 15px;
@@ -16,10 +16,11 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.disease-section:hover {
+/* .disease-section:hover {
   transform: translateY(-5px);
-  /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); */
-}
+ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); 
+} 
+*/
 
 /* Navbar */
 .navbar {
@@ -33,26 +34,49 @@ body {
 }
 
 .nav-link:hover {
-  color: #ffdd57 !important;
+  color: #2e7d32 !important;
   cursor: pointer;
+}
+.nav-link {
+  position: relative;
+  color: white !important;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #2e7d32;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 /* Buttons */
 .btn-primary {
-  background: linear-gradient(135deg, #66bb6a, #84d186);
+  background:#66bb6a;
   border: none;
   padding: 10px 20px;
   border-radius: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-  /*transform: translateY(-5px);*/
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  /* transform: translateY(-5px); */
+  background: #17a71e;
 }
+
 
 /* Headings */
 h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
   color: #2e7d32;
 }
 
@@ -61,3 +85,9 @@ p {
   line-height: 1.8;
 }
 
+.footer-custom {
+  background: rgba(165, 214, 167, 0.82);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}

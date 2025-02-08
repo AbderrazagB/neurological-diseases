@@ -7,7 +7,7 @@ import botLogo from '../assets/logo.webp';
 const Chatbot = () => {
   const [show, setShow] = useState(false);
   const [message, setMessage] = useState('');
-  const [conversation, setConversation] = useState([{ sender: 'bot', text: 'Hello! How can I help you today?' }]);
+  const [conversation, setConversation] = useState([{ sender: 'bot', text: 'Hi there! I\'m here to assist you with any questions about neurological disorders. How can I help today?' }]);
 
   const handleShow = () => setShow(!show);
 
@@ -40,6 +40,7 @@ const Chatbot = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          zIndex: 1000
         }}
       >
         <FaCommentDots size={24} />
@@ -47,8 +48,10 @@ const Chatbot = () => {
 
       <Offcanvas show={show} onHide={handleShow} placement="end" backdrop={true} scroll={false} style={{ width: '600px' }}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Neuro Doc</Offcanvas.Title>
+          
+          <Offcanvas.Title>NeuraHealth Bot</Offcanvas.Title>
         </Offcanvas.Header>
+        <hr />
         <Offcanvas.Body style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
           <div style={{ flexGrow: 1, overflowY: 'auto', marginBottom: '10px', padding: '10px' }}>
             {conversation.map((msg, index) => (

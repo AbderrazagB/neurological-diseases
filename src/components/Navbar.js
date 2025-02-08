@@ -1,4 +1,5 @@
 import React from 'react';
+import navbarLogo from '../assets/navbarLogo.png';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 
@@ -6,7 +7,14 @@ const CustomNavbar = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
-        <Navbar.Brand href="/">Neuro Diseases</Navbar.Brand>
+      <img
+              src= {navbarLogo}
+              width="50"
+              height="50"
+              className="d-inline-block align-top me-2"
+              alt="Navbar Logo"
+            />
+        <Navbar.Brand href="/" className='mt-1'><h3>NeuraHealth</h3></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
